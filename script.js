@@ -71,15 +71,29 @@ songItemPlay.forEach((element)=>{
     element.addEventListener('click', (e)=>{
         makeAllPlay();
         songIndex = parseInt(e.target.id);
-        e.target.classList.remove('fa-play');
-        e.target.classList.add('fa-pause');
-        audioElement.currentTime = 0;
-        gif.style.opacity=1;
-        currentSong.innerText = songs[songIndex].songName;
-        audioElement.src = `songs/${songIndex+1}.mp3`;
-        audioElement.play();
-        masterPlay.classList.remove('fa-play');
-        masterPlay.classList.add('fa-pause');
+        if(audioElement.paused || audioElement.currentTime <= 0){
+            e.target.classList.remove('fa-play');
+            e.target.classList.add('fa-pause');
+            audioElement.currentTime = 0;
+            gif.style.opacity=1;
+            currentSong.innerText = songs[songIndex].songName;
+            audioElement.src = `songs/${songIndex+1}.mp3`;
+            audioElement.play();
+            masterPlay.classList.remove('fa-play');
+            masterPlay.classList.add('fa-pause');  
+        }
+        else{
+            // e.target.classList.remove('fa-pause');
+            // e.target.classList.add('fa-play');
+            audioElement.currentTime = 0;
+            gif.style.opacity=0;
+            currentSong.innerText = songs[songIndex].songName;
+            audioElement.src = `songs/${songIndex+1}.mp3`;
+            audioElement.pause();
+            masterPlay.classList.remove('fa-pause');
+            masterPlay.classList.add('fa-play');
+        }
+        
     })
 })
 
