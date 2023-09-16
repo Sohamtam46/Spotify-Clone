@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
+
+body{
+    background-color: azure;    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Cormorant', serif;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 64px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+
+.brand img{
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-weight: 1.3rem;
+}
+
+
+.container{
+    min-height: 69vh;
+    background-color: black;
+    color: white;
+    font-family: 'Maven Pro', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('bg.jpg');
+}
+
+.bottom{
+    position: sticky;
+    height: 130px;
+    background-color: black;
+    color: white;
+    bottom:0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.icons{
+    margin-top: 24px;
+}
+
+.icons i{
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#myProgressBar{
+    width: 80vw;
+    cursor: pointer;
+}
+
+.songItem{
+    height: 60px;
+    margin: 12px 0;
+    display: flex;
+    background-color: white;
+    color: black;
+    width: 130%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.songItem img{
+    width: 50px;
+    margin: 0 10px;
+    border-radius: 20px;
+}
+
+.timeStamp{
+    padding: 0 23px;
+}
+
+.timeStamp i{
+    cursor: pointer;
+}
+
+.fa-solid {
+    margin-left: 20px;
+}
+
+.songItemContainer{
+    margin-top: 34px;
+}
+
+.songInfo{
+    font-family: 'Maven Pro', sans-serif;
+    position: absolute;
+    left: 10vw;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
